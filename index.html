@@ -7,12 +7,206 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet", style="text/css">
+    <style>
+      body {
+          font-family: 'Roboto', sans-serif;
+      }
+    </style>
+
+        <script type="text/javascript" charset="utf-8">
+
+          function filterTable(table_id, query){
+              $(table_id + " tr").filter(query);
+          }
+          function manFilter(input_id, table_id){
+              $(input_id).on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                filterTable(table_id, function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+              });
+      }
+
+          function createTable(file, parent, table_id) {
+              d3.text(file, function (data) {
+                  var parsedCSV = d3.csv.parseRows(data);
+                  var filter = d3.select(parent)
+                      .append("input").attr("class", "form-control").attr("id", table_id + "input")
+                      .attr("type", "text").attr("placeholder", "Search..");
+                  filter.on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#" + table_id + "body" + " tr").filter(function() {
+                  $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+                });
+              });
+
+                  var table = d3.select(parent)
+                      .append("div").attr("class", "table-responsive")
+                      .append("table").attr("class", "table table-hover").attr("id", table_id);
+
+                  table.append("thead").append("tr")
+                      .selectAll("th")
+                      .data(parsedCSV[0]).enter().append("th").text(function (d) {
+                      return d;
+                  }).on("click", function (d, i) {
+                      return sortTable(i, table_id)
+                  });
+
+                  table.append("tbody").attr("id", table_id + "body")
+                      .selectAll("tr")
+                      .data(parsedCSV.slice(1)).enter()
+                      .append("tr")
+
+                      .selectAll("td")
+                      .data(function (d) {
+                          return d;
+                      }).enter()
+                      .append("td")
+                      .text(function (d) {
+                          return d;
+                      });
+              });
+
+          }
+        </script>
+
 </head>
 <body>
 
 <div class="container-fluid">
-  <h1>Work in Progress</h1>
-  <p>This is some text.</p>
+  <div class="jumbotron">
+    <h1>Work in Progress</h1>
+    <p>This is some text.</p>
+  </div>
+</div>
+<div class="container-fluid" id="tabscontainer">
+  <ul class="nav nav-tabs">
+    <li class="active"><a data-toggle="tab" href="#education">Education</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Experience
+      <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a data-toggle="tab" href="#allexp">All</a></li>
+        <li><a data-toggle="tab" href="#programming">Programming</a></li>
+        <li><a data-toggle="tab" href="#internships">Internships</a></li>
+        <li><a data-toggle="tab" href="#teaching">Teaching</a></li>
+      </ul>
+    </li>
+    <li><a data-toggle="tab" href="#volunteering">Volunteering</a></li>
+    <li><a data-toggle="tab" href="#otherjobs">Other jobs</a></li>
+  </ul>
+  <div class="tab-content">
+  <div id="education" class="tab-pane fade in active">
+    <h3>Education</h3>
+    <script>
+        createTable("data2.csv", "#education", "edtable");
+    </script>
+  </div>
+
+  <div id="allexp" class="tab-pane fade">
+    <h3>Experience</h3>
+    <script>
+        createTable("data.csv", "#allexp", "exptable");
+    </script>
+
+  </div>
+  <div id="programming" class="tab-pane fade">
+    <h3>Programming</h3>
+    <script>
+        createTable("data.csv", "#programming", "progtable");
+    </script>
+  </div>
+
+  <div id="internships" class="tab-pane fade">
+    <h3>Internships</h3>
+    <script>
+        createTable("data.csv", "#internships", "interntable");
+    </script>
+  </div>
+  <div id="teaching" class="tab-pane fade">
+    <h3>Teaching</h3>
+
+    <script>
+        createTable("data.csv", "#teaching", "teachtable");
+    </script>
+  </div>
+
+  <div id="volunteering" class="tab-pane fade">
+    <h3>Volunteering</h3>
+    <script>
+        createTable("data.csv", "#volunteering", "voltable");
+    </script>
+  </div>
+  <div id="otherjobs" class="tab-pane fade">
+    <h3>Other jobs</h3>
+    <script>
+        createTable("data.csv", "#otherjobs", "othertable");
+    </script>
+  </div>
+</div>
+</div>
+<div class="footer">
+  <p>Disclaimer : This website is horrible, don't judge me. Work in progress.</p>
+</div>
+    <script>
+function sortTable(n, table_id) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById(table_id);
+  switching = true;
+  // Set the sorting direction to ascending:
+  dir = "asc";
+  /* Make a loop that will continue until
+  no switching has been done: */
+  while (switching) {
+    // Start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /* Loop through all table rows (except the
+    first, which contains table headers): */
+    for (i = 1; i < (rows.length - 1); i++) {
+      // Start by saying there should be no switching:
+      shouldSwitch = false;
+      /* Get the two elements you want to compare,
+      one from current row and one from the next: */
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /* Check if the two rows should switch place,
+      based on the direction, asc or desc: */
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          // If so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /* If a switch has been marked, make the switch
+      and mark that a switch has been done: */
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      // Each time a switch is done, increase this count by 1:
+      switchcount ++;
+    } else {
+      /* If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again. */
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+</div>
 </div>
 
 </body>
