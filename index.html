@@ -88,29 +88,35 @@ bottom: .5em;
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a data-toggle="tab" href="#allexp">All</a></li>
+            <!--
             <li><a data-toggle="tab" href="#programming">Programming</a></li>
             <li><a data-toggle="tab" href="#internships">Internships</a></li>
             <li><a data-toggle="tab" href="#teaching">Teaching</a></li>
+            -->
           </ul>
         </li>
+        <!--
         <li><a data-toggle="tab" href="#volunteering">Volunteering</a></li>
         <li><a data-toggle="tab" href="#otherjobs">Other jobs</a></li>
+        -->
+        <li><a data-toggle="tab" href="#publications">Publications</a></li>
       </ul>
       <div class="tab-content">
           <div id="education" class="tab-pane fade in active">
             <h3>Education</h3>
             <script>
-                createTable("./data2.csv", "#education", "edtable");
-            </script>
+                var table_id = createTable("./education.csv", "#education", "edtable");
+              </script>
           </div>
 
           <div id="allexp" class="tab-pane fade">
             <h3>Experience</h3>
             <script>
-                createTable("./data.csv", "#allexp", "exptable");
+                createTable("./experience.csv", "#allexp", "exptable");
             </script>
 
           </div>
+          <!--
           <div id="programming" class="tab-pane fade">
             <h3>Programming</h3>
             <script>
@@ -121,7 +127,10 @@ bottom: .5em;
           <div id="internships" class="tab-pane fade">
             <h3>Internships</h3>
             <script>
-                createTable("./data.csv", "#internships", "interntable");
+              createTable("./experience.csv", "#internships", "interntable");
+            </script>
+            <script>
+              filterW3Schools("interntable","candidate");
             </script>
           </div>
           <div id="teaching" class="tab-pane fade">
@@ -142,6 +151,11 @@ bottom: .5em;
             <script>
                 createTable("./data.csv", "#otherjobs", "othertable");
             </script>
+          </div>
+          -->
+          <div id="publications" class="tab-pane fade">
+            <h3>Publications</h3>
+            <script src="https://bibbase.org/show?bib=https://bibbase.org/network/files/KTq3d2DYPi6qwGoRA&jsonp=1"></script> 
           </div>
         </div>
     </div>

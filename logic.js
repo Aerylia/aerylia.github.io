@@ -11,6 +11,34 @@ function manFilter(input_id, table_id){
   });
 }
 
+function bla()
+{
+
+}
+
+function filterW3Schools(table_id, query) {
+  // Declare variables
+  var filter, table, tr, td, i, txtValue;
+  filter = query.toUpperCase();
+  console.log(document.getElementsByTagName("table"));
+  table = document.getElementById(table_id);
+  console.log(table)
+  tr = table.getElementsByTagName("tr");
+  console.log(tr);
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+
 function createTable(file, parent, table_id) {
   d3.text(file, function (data) {
       var parsedCSV = d3.csv.parseRows(data);
@@ -62,6 +90,7 @@ function createTable(file, parent, table_id) {
 $('.dataTables_length').addClass('bs-select');
 });
 });
+return table_id;
 }
 
 function sortTable(n, table_id) {
