@@ -5,17 +5,34 @@ Year = {2019},
 Eprint = {RG.2.2.11886.77125},
 Eprinttype = {ResearchGate},
 note = {UNPUBLISHED, Master thesis Artificial Intelligence},
+url_Paper = {https://www.researchgate.net/publication/335977643_Constrained_quantum_CNOT_circuit_re-synthesis_using_deep_reinforcement_learning},
+abstract = {In this master thesis, we describe a novel approach to constrained CNOT circuit resynthesis as a first step towards neural constrained quantum circuit re-synthesis. We train a neural network to do constrained Gaussian elimination from a parity matrix using deep reinforcement learning. The CNOT circuit is transformed into a parity matrix from which an equivalent CNOT circuit is synthesized such that all CNOT gates adhere to the connectivity constraints provided by the quantum computer architecture. For our n-step deep Q learning approach, we have used an asynchronous dueling neural network with three different action selection policies: ϵ-greedy, softmax and a novel oracle selection policy. To train this neural network, we have proposed a novel phased training procedure that guides the training process from trivial problems to arbitrary ones while simulating. Although we were only able to successfully train an agent for trivial quantum computer connectivity constraints, the 2 and 3 qubit coupling graphs. We did show that those agents were able to perform similar to the genetic Steiner baseline and could even improve on them. We also investigated the effect of coupling graph sizes and connectivity on network performance and training time. Lastly, we show that transfer learning can result in an improved network, but it takes longer to train. This is a very promising start of a new research field that could result in a universal quantum circuit optimization and mapping algorithm that is robust to both expected and unexpected future changes in quantum computer architectures.}
 }
 
 @article{1904.00633,
 Author = {Kissinger, Aleks and Meijer-van de Griend, Arianne},
 Title = {CNOT circuit extraction for topologically-constrained quantum memories},
-journal={\href{http://www.rintonpress.com/xxqic20/qic-20-78/0581-0596.pdf}{Quantum Information and Computation}},
+journal={Quantum Information and Computation},
 volume={20},
 number={7\&8},
 pages={581--596},
 year={2020},
 %note = {Also presented at QPL 2019, Chapman University (Orange, USA)},
+url_Paper = {http://www.rintonpress.com/xxqic20/qic-20-78/0581-0596.pdf},
+abstract = {Many physical implementations of quantum computers impose stringent
+memory constraints in which 2-qubit operations can only be performed between
+qubits which are nearest neighbours in a lattice or graph structure. Hence, before
+a computation can be run on such a device, it must be mapped onto the physical
+architecture. That is, logical qubits must be assigned physical locations in the
+quantum memory, and the circuit must be replaced by an equivalent one containing
+only operations between nearest neighbours. In this paper, we give a new technique
+for quantum circuit mapping (a.k.a. routing), based on Gaussian elimination
+constrained to certain optimal spanning trees called Steiner trees. We give a reference
+implementation of the technique for CNOT circuits and show that it significantly outperforms general-purpose routines on CNOT circuits. We then comment on how the
+technique can be extended straightforwardly to the synthesis of CNOT+Rz circuits and
+as a modification to a recently-proposed circuit simplification/extraction procedure for
+generic circuits based on the ZX-calculus.
+}
 }
 
 @online{CSThesis,
@@ -25,12 +42,26 @@ Year = {2018},
 Eprint = {RG.2.2.21953.10087},
 Eprinttype = {ResearchGate},
 note = {UNPUBLISHED, Master thesis Computing Science},
+url_Paper = {https://www.researchgate.net/publication/335977746_Natural_language_generation_for_commercial_applications},
+abstract = {This master thesis gives an overview on natural language generation with the focus of dialogue systems for commercial use. 
+We give a description of the general approach to natural language generation and their neural architectures first.
+Then three application domains are discussed in more detail: language style transfer, dialogue response generation and controlling dialogue response generation. 
+For each domain, a use case was implemented and the results are discussed. We investigated automatic customer support, an empathetic automatic customer support and sentiment adjustment of reviews.
+We show promising results for the first two use cases, but the last use case was inconclusive due to difficulties with implementation. 
+We finish with a short discussion of the use of natural language generation in commercial applications and what can be improved in our current model architectures.}
 }
 
 @article{2004.06052,
   title={Architecture-aware synthesis of phase polynomials for NISQ devices},
   author={Meijer-van de Griend, Arianne and Duncan, Ross},
-  journal={\href{https://arxiv.org/pdf/2004.06052.pdf}{arXiv preprint arXiv:2004.06052}},
+  journal={arXiv preprint arXiv:2004.06052},
   year={2020},
-  note={Presented at QPL 2020, \href{https://www.youtube.com/watch?v=uOAA0nbh9MI}{virtual} }
+  note={To appear in proceedings of QPL 2020 conference},
+  url_Paper = {https://arxiv.org/pdf/2004.06052.pdf},
+  url_Link = {https://www.youtube.com/watch?v=uOAA0nbh9MI},
+  abstract = {We propose a new algorithm to synthesise quantum circuits for phase polynomials, which takes
+  into account the qubit connectivity of the quantum computer. We focus on the architectures
+  of currently available NISQ devices. Our algorithm generates circuits with a smaller CNOT
+  depth than the algorithms currently used in Staq and t|ket>, while improving the runtime
+  with respect the former.}
 }
