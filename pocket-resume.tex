@@ -8,7 +8,7 @@
 
 \renewcommand*\familydefault{\sfdefault} 	
 \usepackage[T1]{fontenc}
-\usepackage{hyperref}
+%\usepackage{hyperref}
 
 \usepackage{array}
 
@@ -17,7 +17,7 @@
 % more font size definitions
 \usepackage{moresize}	
 
-\usepackage[paperwidth=85mm, paperheight=55mm, margin=3mm, showcrop=true]{geometry}
+\usepackage[paperwidth=90mm, paperheight=50mm, margin=3mm, showcrop=true]{geometry}
 \usepackage{tikz}
 \usetikzlibrary{shapes, backgrounds}
 
@@ -79,65 +79,69 @@
 %set a background col for whole page
 \pagecolor{bgcol}
 
-\newcommand{\icons}{Font-Awesome-SVG-PNG/}	%path to your icon lib
-\newcommand{\icon}[2]{\colorbox{secondcol}{\includegraphics[height=#2]{\icons#1}}}	%icon shortcut
+\usepackage{svg}
+% SVG icons from https://www.svgrepo.com/
+\newcommand{\icons}{svg/}	%path to your icon lib
+\newcommand{\icon}[2]{\colorbox{secondcol}{\includesvg[height=#2, width=#2, distort=true]{\icons#1}}}	%icon shortcut
 \newcommand{\icontext}[4]{ 						%icon with text shortcut
 	\vcenteredhbox{\icon{#1}{#2}}\hspace{#4} \vcenteredhbox{\textcolor{textcol}{#3}}
 	%\vcenteredhbox{\textcolor{textcol}{#3}} \hspace{5pt} \vcenteredhbox{\icon{#1}{#2}} \hspace{20pt}
 }
 
-\usepackage[cam,width=91truemm, height=61truemm,pdftex,center]{crop}
+\usepackage[cam,width=100truemm, height=60truemm,pdftex,center]{crop}
 \begin{document}
 \small
-        \begin{flushleft}
-            \colorbox{maincol}{\large{\textcolor{white}{\textbf{\uppercase{Arianne Meijer}}} }}\\
-            \small{\textcolor{fourthcol}{\textsc{Pocket Resume}}}\\
-            \end{flushleft}
-            \vspace{-10pt}
-            \parbox{0.6\textwidth}{
-            \begin{flushleft}
-            \small
-			\icontext{at2}{10pt}{\href{mailto:ariannemeijer@gmail.com}{ariannemeijer@gmail.com} }{5pt}\\[-2pt]
-			\icontext{mobile-phone2}{10pt}{+358 45 31 296 31}{5pt}\\[-2pt]
-			\icontext{map-marker2}{10pt}{Espoo, Finland}{5pt}\\[-2pt]
-			\icontext{linkedin-box2}{10pt}{\href{https://linkedin.com/in/aerylia}{linkedin.com/in/aerylia}}{5pt}
-			\end{flushleft}
-			}
-			\parbox{0.4\textwidth}{
-			\begin{center}
-			\vspace{-20pt}
-			\colorbox{fourthcol}{\includegraphics[height=10pt]{\icons download}\hspace{5pt} \textcolor{white}{Full resume}}\\
-			\includegraphics[height=75pt]{qr-code2.pdf}
-			\end{center}
-			}
-			\begin{center}
-			\vspace{-10pt}
-			%\colorbox{thirdcol}{\ssmall{\textcolor{white}{\textsc{Student at Radboud University Nijmegen.}} }} \\[-2pt]
-			%\colorbox{thirdcol}{\hspace{13pt}\small{\textcolor{white}{Graduate Student \textbf{Msc. Computer Science \& A.I.}}\hspace{13pt}}}
-			\colorbox{thirdcol}{\hspace{3pt}\small{\textcolor{white}{\textbf{Computer Science PhD student, NISQ Software}}\hspace{2pt}}}
-			\end{center}
+\hspace{-15pt}
+\begin{minipage}{0.6\textwidth}
+    \begin{flushleft}
+\vspace{-5pt}
+        \colorbox{maincol}{\large{\textcolor{white}{\textbf{\uppercase{Arianne Meijer}}} }}\\
+            \hspace{0pt}
+        \small{\textcolor{fourthcol}{\textsc{Pocket Resume}}}\\[10pt]
+		\icontext{at}{10pt}{ariannemeijer@gmail.com}{5pt}\\[-2pt]
+		\icontext{phone}{10pt}{+358 45 31 296 31}{5pt}\\[-2pt]
+		\icontext{location}{10pt}{Espoo, Finland}{5pt}\\[-2pt]
+		\icontext{linkedin}{10pt}{linkedin.com/in/aerylia}{5pt}
+	\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+	\begin{center}
+        \colorbox{fourthcol}{\includegraphics[height=10pt]{\icons download}\hspace{14pt}\textcolor{white}{Full resume}\hspace{14pt}}\\
+        %\hspace{15pt}
+		\includegraphics[width=0.9\textwidth]{qr-code2.pdf}
+	\end{center}
+\end{minipage}
+\begin{center}
+%\vspace{0pt}
+\hspace{-6pt}
+	\colorbox{thirdcol}{\hspace{15pt}\small{\textcolor{white}{\textbf{Computer Science PhD researcher, NISQ Software}}\hspace{9pt}}}
+\end{center}
 \newpage
         \begin{center}
-            \colorbox{maincol}{\large{\textcolor{white}{\textbf{T}}}\small{\textcolor{white}{oo}} \large{\textcolor{white}{\textbf{L}}}\small{\textcolor{white}{ong}} \large{\textcolor{white}{\textbf{; D}}}\small{\textcolor{white}{idn't}} \large{\textcolor{white}{\textbf{R}}}\small{\textcolor{white}{emember}}}\\
+            %\colorbox{maincol}{\large{\textcolor{white}{\textbf{T}}}\small{\textcolor{white}{oo}} \large{\textcolor{white}{\textbf{L}}}\small{\textcolor{white}{ong}} \large{\textcolor{white}{\textbf{; D}}}\small{\textcolor{white}{idn't}} \large{\textcolor{white}{\textbf{R}}}\small{\textcolor{white}{emember}}}\\
+            \colorbox{maincol}{\textcolor{white}{\hspace{9pt}\uppercase{\textbf{Too long; Didn't Remember}}\hspace{9pt}}}
         \end{center}
         \ssmall
         \begin{flushleft}
             %\icontext{square-solid}{5pt}{\textcolor{fourthcol}{\textbf{Looking for an AI Master thesis project February - July 2019}}}{3pt}\\[2pt]
-            \icontext{square-solid}{5pt}{\textcolor{fourthcol}{\textbf{Interested in fun and challenging problems to solve in new creative ways}}}{3pt}\\[2pt]
-            \icontext{square-solid}{5pt}{\textcolor{fourthcol}{\textbf{Languages:}} Dutch (native), English (professional), German (intermediate)}{3pt}\\[2pt]
-            \icontext{square-solid}{5pt}{\textcolor{fourthcol}{\textbf{Languages:}} Python (native), Java (advanced), C (basic), Haskell/Clean (basic)}{3pt}\\[2pt]
-            \icontext{square-solid}{5pt}{\textcolor{fourthcol}{\textbf{Worked at:}} Atos, RadboudUMC, Anchormen, SIMON, Machine2Learn}{3pt}\\[2pt]
-            \icontext{square-solid}{5pt}{\textcolor{fourthcol}{\textbf{Interests:}} Quantum Computing, Machine Learning, Neural Networks, NLP}{3pt}\\[2pt]
-            \icontext{square-solid}{5pt}{\textcolor{fourthcol}{\textbf{Hobbies:}} Knitting, Netflix, Logic puzzles, Sewing, Hackathons, Anime}{3pt}\\[2pt]
-            \icontext{square-solid}{5pt}{\textcolor{fourthcol}{\textbf{Obtained degrees:}} Msc. Computer Science \& Artificial Intelligence (cum laude)}{3pt}\\[2pt]
-            \icontext{square-solid}{5pt}{\textcolor{fourthcol}{\textbf{Expected graduation:}} December 2024, CS PhD student}{3pt}\\[2pt]
-            \icontext{square-solid}{5pt}{\textcolor{fourthcol}{\textbf{Resume in QR code will stay up-to-date}} }{3pt}\\[2pt]
+            \vspace{-5pt}
+            \icontext{}{5pt}{\textcolor{fourthcol}{\textbf{Interested in fun and challenging problems to solve in new creative ways}}}{3pt}\\[1pt]
+            \icontext{}{5pt}{\textcolor{fourthcol}{\textbf{Languages:}} Dutch (native), English (professional), German (intermediate)}{3pt}\\[1pt]
+            \icontext{}{5pt}{\textcolor{fourthcol}{\textbf{Languages:}} Python (main), Java (advanced), C (basic), Haskell/Clean (basic)}{3pt}\\[1pt]
+            \icontext{}{5pt}{\textcolor{fourthcol}{\textbf{Worked at:}} Cambridge Quantum (now Quantinuum), Atos, RadboudUMC}{3pt}\\[1pt]
+            \icontext{}{5pt}{\textcolor{fourthcol}{\textbf{Interests:}} Quantum Computing, Machine Learning, Neural Networks, NLP}{3pt}\\[1pt]
+            \icontext{}{5pt}{\textcolor{fourthcol}{\textbf{Hobbies:}} Knitting, Swimming, Logic puzzles, Anime, Miniature painting, Music}{3pt}\\[1pt]
+            \icontext{}{5pt}{\textcolor{fourthcol}{\textbf{Obtained degrees:}} Msc. Computer Science \& Artificial Intelligence (cum laude)}{3pt}\\[1pt]
+            \icontext{}{5pt}{\textcolor{fourthcol}{\textbf{Expected graduation:}} December 2023, CS PhD student}{3pt}\\[1pt]
+            \icontext{}{5pt}{\textcolor{fourthcol}{\textbf{Resume in QR code will stay up-to-date}} }{3pt}
         \end{flushleft}
         \begin{flushright}
-        \vspace{-25pt}
-        ORCID ID:\\
-			\includegraphics[height=50pt]{ORCID_QR_code.png}
+            \vspace{-25pt}
+            \hspace{-2pt}
+            ORCID ID:\\
+            \hspace{-2pt}
+			\includegraphics[height=45pt]{ORCID_QR_code.png}
         \end{flushright}
-        \vspace{-25pt}
-			\colorbox{thirdcol}{\hspace{3pt}\small{\textcolor{white}{\textbf{University of Helsinki}}\hspace{2pt}}}
+            \vspace{-26pt}
+			\colorbox{thirdcol}{\hspace{9pt}\small{\textcolor{white}{\textbf{University of Helsinki}}\hspace{9pt}}}
 \end{document}

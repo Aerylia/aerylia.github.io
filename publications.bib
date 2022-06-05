@@ -65,3 +65,33 @@ We finish with a short discussion of the use of natural language generation in c
   depth than the algorithms currently used in Staq and t|ket>, while improving the runtime
   with respect the former.}
 }
+
+
+@article{quantmark,
+  author={Meijer - van de Griend, Adriana and Nurminen, Jukka K},
+  journal={IEEE Transactions on Quantum Engineering}, 
+  title={QuantMark: A benchmarking API for comparing VQE algorithms}, 
+  year={2022},
+  volume={},
+  number={},
+  pages={1-1},
+  doi={10.1109/TQE.2022.3159327}}
+  
+@article{equi2021bit,
+  title={From Bit-Parallelism to Quantum: Breaking the Quadratic Barrier},
+  author={Equi, Massimo and de Griend, Arianne Meijer-van and M{\"a}kinen, Veli},
+  journal={arXiv preprint arXiv:2112.13005},
+  year={2021},
+  url_Paper = {https://arxiv.org/pdf/2112.13005.pdf}
+}
+
+@article{2205.00724,
+  title={Dynamic qubit allocation and routing for constrained topologies by CNOT circuit re-synthesis},
+  author={Meijer - van de Griend, Arianne and Li, Sarah Meng},
+  journal={arXiv preprint arXiv:2205.00724},
+  year={2022},
+  note={To appear in proceedings of QPL 2022 conference},
+  url_Paper = {https://arxiv.org/pdf/2205.00724.pdf},
+  abstract = {Many quantum computers have constraints regarding which two-qubit operations are locally allowed. To run a quantum circuit under those constraints, qubits need to be allocated to different quantum registers, and multi-qubit gates need to be routed accordingly. Recent developments have shown that Steiner-tree based compiling strategies provide a competitive tool to route CNOT gates. However, these algorithms require the qubit allocation to be decided before routing. Moreover, the allocation is fixed throughout the computation, i.e. the logical qubit will not move to a different qubit register. This is inefficient with respect to the CNOT count of the resulting circuit. In this paper, we propose the algorithm PermRowCol for routing CNOTs in a quantum circuit. It dynamically reallocates logical qubits during the computation, and thus results in fewer output CNOTs than the algorithms Steiner-Gauss[11] and RowCol [23]. Here we focus on circuits over CNOT only, but this method could be generalized to a routing and allocation strategy on Clifford+T circuits by slicing the quantum circuit into subcircuits composed of CNOTs and single-qubit gates. Additionally, PermRowCol can be used in place of Steiner-Gauss in the synthesis of phase polynomials as well as the extraction of quantum circuits from ZX-diagrams.}
+}
+}
