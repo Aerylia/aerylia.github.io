@@ -471,13 +471,13 @@ filter equal={\inresume}{y}]
 \end{longtable}
 %\end{longtable}
 
-\cvsect{Teaching}{0.6}{secondcol}{textcol}
+\cvsect{Experience}{0.6}{secondcol}{textcol}
 %\begin{longtable}[h!]
 \begin{longtable}{p{0.16\linewidth}cp{0.75\linewidth}}
 \csvreader[head to column names,
 filter equal={\inresume}{y}]
 {teaching.csv}{}
-{\textbf{\date} & : & \begin{tabular}[c]{@{}p{\linewidth}@{}}
+{\textbf{\end} & : & \begin{tabular}[c]{@{}p{\linewidth}@{}}
 \ifthenelse{\equal{\institute}{}}
 {\textbf{\title}}
 {\ifthenelse{\equal{\link}{}}
