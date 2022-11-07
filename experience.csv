@@ -1,19 +1,13 @@
-date,title,institute,city,country,link,description,bibtex,inresume
-01/2021 - 12/2024, Salaried doctoral candidate,University of Helsinki,Helsinki,Finland,https://www.helsinki.fi/,Researching NISQ software. Supervisors: Jukka K. Nurminen and Sabrina Maniscalco.,,y
-08/2020 - 12/2020,Project researcher,University of Turku,Turku,Finland,http://www.tcqp.fi/,Researching quantum computing algorithms in particular VQE.,,y
-10/2019 - 04/2020,Research scientist,Cambridge Quantum Computing,Cambridge,United Kingdrom,https://cambridgequantum.com/,Working on t|ket> i.e. researching quantum compiling techniques.,2004.06052,y
-04/2019 - 08/2019,AI Master thesis,Radboud University,Nijmegen,the Netherlands,https://quantum.cs.ru.nl/,Investigated the use of deep reinforcement learning for compiling quantum circuits. Supervisors:  Aleks Kissinger (RU) and Johan Kwisthout (RU). Grade: 9/10.,CSThesis,y
-01/2019 - 03/2019,Teaching assistant quantum computing,Radboud University,Nijmegen,the Netherlands,https://quantum.cs.ru.nl/,Researched a compiling technique for quantum computers and wrote an paper about it.,1904.00633,y
-01/2019 - 06/2019,Teaching assistant Combinatorics,Radboud University,Nijmegen,the Netherlands,,Helping students with exercises and grading them.,,
-01/2019 - 06/2019,Teaching assistant Calculus and Probability,Radboud University,Nijmegen,the Netherlands,,Helping students with exercises and grading them.,,
-01/2019 - 06/2019,Teaching assistant Representation and Interaction,Radboud University,Nijmegen,the Netherlands,,Helping students with exercises and grading them (Prolog).,,
-12/2018 - 03/2019,Manual sorter,PostNL,Den Bosch,the Netherlands,https://www.postnl.nl/en/,Manual sorting of the physical mail.,,
-06/2018 - 11/2018,Graduation internship Computing Science,Machine2Learn,Amsterdam,the Netherlands,,Researched natural language generation in the form of a chatbot and language style transfer. Supervisors: Tom Heskes (RU) Wouter Oosterheert (Machine2Learn).,AIThesis,y
-09/2017 - 02/2018,Internship Artificial Intelligence,Simon,Eindhoven,the Netherlands,https://www.pttrns.ai/,Created an automatic invoice processor. Supervisors: George Kachargis (RU) Martha Larson (RU) Erik van Breusegem (SIMON). Grade: 8.5/10.,,y
-08/2016 - 02/2017,Junior data scientist,Anchormen,Amsterdam,the Netherlands,https://anchormen.nl/,Worked on several Data Science and AI projects.,,y
-03/2016 - 08/2016,Graduation Internship Artificial Intelligence,RadboudUMC,Nijmegen,the Netherlands,https://www.radboudumc.nl/afdelingen/genetica,Used kinship verification for syndrome diagnosis. Supervisors: Marco Wiering (RuG) Jayne Hehir-Kwa (RadboudUMC) Hamdi Dibeklioglu (TU Delft).,,y
-05/2015 - 08/2015,Graduation Internship Computer Science,Atos,Groningen,the Netherlands,https://atos.net/en-nl/netherlands,Used text mining for predictive maintenance on Atos' computer network. Supervisors: Michael Biehl (RuG) Marco Aiello (RuG) Mark Niemeijer (Atos).,,y
-09/2014 - 11/2014,Internship computer science teacher,Zernike College,Haren,the Netherlands,http://www.harenslyceum.nl/index.html,Taught computer science classes in high school (1/2 VWO and 4 havo/VWO).,,
-08/2013 - 03/2014,Outbound call center employee,Nuvema,Groningen,the Netherlands,,Called people to make appointments to discuss life insurance.,,
-06/2011 - 07/2011,Problem solver,Van Dijk Educatie,Kampen,the Netherlands,,Solving problems in the warehouse; counting stock and updating the system when necessary.,,
-09/2009 - 06/2016,Tutor mathematics and computer science,,,the Netherlands,,Occasionally helping children with remedial teaching in maths and programming.,,
+start, end,title,institute,city,country,link,description,bibtex,inresume
+01/2021 , 12/2024, Salaried doctoral candidate,University of Helsinki,Helsinki,Finland,https://www.helsinki.fi/,Researching NISQ software. Supervisors: Jukka K. Nurminen and Sabrina Maniscalco.,,y
+08/2020 , 12/2020,Project researcher,University of Turku,Turku,Finland,http://www.tcqp.fi/,Researching quantum computing algorithms in particular VQE.,,y
+10/2019 , 04/2020,Research scientist,Cambridge Quantum Computing,Cambridge,United Kingdrom,https://cambridgequantum.com/,Working on t|ket> i.e. researching quantum compiling techniques.,2004.06052,y
+04/2019 , 08/2019,AI Master thesis,Radboud University,Nijmegen,the Netherlands,https://quantum.cs.ru.nl/,Investigated the use of deep reinforcement learning for compiling quantum circuits. Supervisors:  Aleks Kissinger (RU) and Johan Kwisthout (RU). Grade: 9/10.,CSThesis,y
+12/2018 , 03/2019,Manual sorter,PostNL,Den Bosch,the Netherlands,https://www.postnl.nl/en/,Manual sorting of the physical mail.,,
+06/2018 , 11/2018,Graduation internship Computing Science,Machine2Learn,Amsterdam,the Netherlands,,Researched natural language generation in the form of a chatbot and language style transfer. Supervisors: Tom Heskes (RU) Wouter Oosterheert (Machine2Learn).,AIThesis,y
+09/2017 , 02/2018,Internship Artificial Intelligence,Simon,Eindhoven,the Netherlands,https://www.pttrns.ai/,Created an automatic invoice processor. Supervisors: George Kachargis (RU) Martha Larson (RU) Erik van Breusegem (SIMON). Grade: 8.5/10.,,y
+08/2016 , 02/2017,Junior data scientist,Anchormen,Amsterdam,the Netherlands,https://anchormen.nl/,Worked on several Data Science and AI projects.,,y
+03/2016 , 08/2016,Graduation Internship Artificial Intelligence,RadboudUMC,Nijmegen,the Netherlands,https://www.radboudumc.nl/afdelingen/genetica,Used kinship verification for syndrome diagnosis. Supervisors: Marco Wiering (RuG) Jayne Hehir-Kwa (RadboudUMC) Hamdi Dibeklioglu (TU Delft).,,y
+05/2015 , 08/2015,Graduation Internship Computer Science,Atos,Groningen,the Netherlands,https://atos.net/en-nl/netherlands,Used text mining for predictive maintenance on Atos' computer network. Supervisors: Michael Biehl (RuG) Marco Aiello (RuG) Mark Niemeijer (Atos).,,y
+08/2013 , 03/2014,Outbound call center employee,Nuvema,Groningen,the Netherlands,,Called people to make appointments to discuss life insurance.,,
+06/2011 , 07/2011,Problem solver,Van Dijk Educatie,Kampen,the Netherlands,,Solving problems in the warehouse; counting stock and updating the system when necessary.,,
