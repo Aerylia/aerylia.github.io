@@ -330,7 +330,7 @@
 \usepackage{hyperref}
 \usepackage{placeins}
 % Bibliography
-\usepackage[style=apa]{biblatex}
+\usepackage[style=alphabetic]{biblatex}
 \bibliography{publications.bib}
 
 \usepackage{csvsimple}
@@ -410,9 +410,9 @@
 			%\icontext{home-heart}{20pt}{Married}\\
 		}
         %\hspace{10pt}
-		\parbox[b][150pt][c]{0.3\textwidth}{
+		\parbox[b][150pt][c]{0.32\textwidth}{
 			%\icontext{mobile-phone}{20pt}{\href{tel:00358453129631}{+358 45 312 9631}}\\
-			\icontext{at}{20pt}{\href{mailto:ariannemeijer@gmail.com}{ariannemeijer@gmail.com} }\\
+			\icontext{at}{20pt}{\href{mailto:arianne.vandegriend@helsinki.fi}{arianne.vandegriend@helsinki.fi} }\\
 			%\icontext{skype}{20pt}{aerylia13}\\
 			\icontext{github}{20pt}{\href{https://github.com/aerylia}{github.com/aerylia}}\\
 			\icontext{linkedin-box}{20pt}{\href{https://linkedin.com/in/aerylia}{linkedin.com/in/aerylia}}\\
@@ -433,13 +433,13 @@
     \end{center}
     
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cvsect{Education}{0.6}{thirdcol}{textcol}
+\cvsect{Education}{0.6}{secondcol}{textcol}
 %\begin{table}[h!]
-\begin{longtable}{p{0.16\linewidth}cp{0.75\linewidth}}
+\begin{longtable}{p{0.05\linewidth}cp{0.85\linewidth}}
 \csvreader[head to column names,
 filter equal={\inresume}{y}]
 {education.csv}{}
-{\textbf{text} & : & \begin{tabular}[c]{@{}l@{}}
+{\textbf{\enddate} & : & \begin{tabular}[c]{@{}l@{}}
 \ifthenelse{\equal{\link}{}}
 {\textbf{\degree, \institute, \city~(\country)}}
 {\href{\link}{\textbf{\degree, \institute, \city~(\country)}}} 
@@ -448,38 +448,83 @@ filter equal={\inresume}{y}]
 }
 \end{longtable}
 
+\cvsect{Experience}{0.6}{thirdcol}{textcol}
+\begin{longtable}{p{0.05\linewidth}cp{0.85\linewidth}}
+\csvreader[head to column names,
+filter equal={\inresume}{y}]
+{experience.csv}{}
+{\textbf{\enddate} & : & \begin{tabular}[c]{@{}p{\linewidth}@{}}
+\ifthenelse{\equal{\institute}{}}
+{\textbf{\title}}
+{\ifthenelse{\equal{\link}{}}
+{\textbf{\title, \institute, \city~(\country)}}
+{\href{\link}{\textbf{\title, \institute, \city~(\country)}}} }
+\ifthenelse{\equal{\description}{}}{}{\\\textit{\description}}
+\ifthenelse{\equal{\bibtex}{}}{}{\cite{\bibtex}}  \\ 
+\end{tabular} \\[10pt]
+}
+\end{longtable}
 
-%\newpage
-\FloatBarrier
+\cvsect{Grants, awards, and honours}{0.6}{maincol}{textcol}
+\begin{itemize}
+    \item Donasci \textbf{travel grant} (2022) €650,- to go to QCHS Summer school
+    \item Suomen Kulttuurirahasto \textbf{doctoral thesis grant} (2021) €26.000,-
+    \item University of Helsinki \textbf{salaried doctoral position} (2021) equivalent to 4 years, full-time work
+    \item Master Artificial Intelligence, \textbf{cum laude} honours (2019)
+\end{itemize}
 
-%Debug csv tables:
-%\csvreader[tabular=lll,head to column names]%
-%{education.csv}{}%
-%{\thecsvinputline & \degree & \link}
-%\csvreader[tabular=lll,head to column names]%
-%{experience.csv}{}%
-%{\thecsvinputline & \title & \link}
 
 \cvsect{Publications}{0.6}{secondcol}{textcol}
-\nocite{*}\\
+\nocite{*}
+\printbibliography[title=Published, keyword=published]
+\printbibliography[title=Accepted, keyword=accepted]
+%\printbibliography[title=Unpublished, keyword=unpublished]
+%\printbibliography[title=Unfinished, keyword=unfinished]
 
-\textbf{Published:}
-\printbibliography[heading=none, keyword=published]
 
-\textbf{Accepted:}
-\printbibliography[heading=none, keyword=accepted]
+\cvsect{Teaching}{0.6}{thirdcol}{textcol}
+\begin{longtable}{p{0.05\linewidth}cp{0.85\linewidth}}
+\csvreader[head to column names,
+filter equal={\inresume}{y}]
+{teaching.csv}{}
+{\textbf{\enddate} & : & \begin{tabular}[c]{@{}p{\linewidth}@{}}
+\ifthenelse{\equal{\institute}{}}
+{\textbf{\title}}
+{\ifthenelse{\equal{\link}{}}
+{\textbf{\title, \institute, \city~(\country)}}
+{\href{\link}{\textbf{\title, \institute, \city~(\country)}}} }
+\ifthenelse{\equal{\description}{}}{}{\\\textit{\description}}
+\ifthenelse{\equal{\bibtex}{}}{}{\cite{\bibtex}}  \\ 
+\end{tabular} \\[10pt]
+}
+\end{longtable}
 
-%\textbf{Unpublished:}
-%\printbibliography[heading=none, keyword=unpublished]
+\newpage
 
-%\textbf{Unfinished:}
-%\printbibliography[heading=none, keyword=unfinished]
+\cvsect{Professional services}{0.6}{maincol}{textcol}
+\begin{itemize}
+    \item Working group Secretary P2995 IEEE Standards Association (since 6/2022)
+    \item Program committee member Quantum Resource Estimation 2022
+    \item Steering committee member Women in Quantum (2020-2021)
+    %\item Much more reviewing, see thessa
+\end{itemize}
+
+\cvsect{Oration}{0.6}{secondcol}{textcol}
+\begin{longtable}{p{.3\linewidth}p{.1\linewidth}p{.5\linewidth}}
+    \textbf{Event} & \textbf{Location} & \textbf{Title} \\
+    Business Finland Quantum Computing Campaign Launch event (17.11.2022) & Helsinki (Finland) & Panelist "Where is Finland heading with Quantum?" \\
+    Quantum physics and logic 2022 & Oxford (UK) & Dynamic qubit allocation and routing for constrained topologies by CNOT circuit re-synthesis~\cite{2205.00724}\\
+    Quantum Resource Estimation 2021 & online & Quantmark: A benchmarking API for comparing VQE algorithms.~\cite{quantmark} \\
+    Quantum physics and logic 2020 & Paris (online) & Architecture-aware synthesis of phase polynomials for NISQ devices.~\cite{2004.06052}\\
+    Quantum physics and logic 2019 & Orange (USA) & CNOT circuit extraction for topologically constrained quantum memories.~\cite{1904.00633}\\
+\end{longtable}
+
 
 
 %---------------------------------------------------------------------------------------
 %	ACTIVITIES
 %----------------------------------------------------------------------------------------
-	\cvsect{Activities}{1}{maincol}{textcol}\\[8pt]
+	\cvsect{Personality}{1}{maincol}{textcol}\\[8pt]
 	\mbox{
 		
 		%\hspace{30pt}
@@ -492,7 +537,8 @@ filter equal={\inresume}{y}]
 		\parbox[b][3cm][c]{8.5cm}{
 		\vspace{-20pt}
         \raggedright
-			\textcolor{textcol}{I love to challenge myself both creatively and intellectually. I particularly enjoy combining established techniques in new ways. This can \\easily be seen in my crafts.}\\[10pt]
+			\textcolor{textcol}{I love to challenge myself both creatively and intellectually. I particularly enjoy combining established techniques in new ways. %This can \\easily be seen in my crafts.
+   }\\[10pt]
     \normalsize{Or in the words of Spoonboy from the Matrix (1999):}\\
     \textbf{Do not try and think outside the box, that's impossible. Instead, only try to realize the truth... There is no box.}
     
@@ -513,5 +559,5 @@ filter equal={\inresume}{y}]
 %
 %============================================================================%
 
-
+Date last updated: 8.11.2022
 \end{document}
