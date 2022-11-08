@@ -458,7 +458,7 @@ filter equal={\inresume}{y}]
 \csvreader[head to column names,
 filter equal={\inresume}{y}]
 {experience.csv}{}
-{\textbf{\date} & : & \begin{tabular}[c]{@{}p{\linewidth}@{}}
+{\textbf{\end} & : & \begin{tabular}[c]{@{}p{\linewidth}@{}}
 \ifthenelse{\equal{\institute}{}}
 {\textbf{\title}}
 {\ifthenelse{\equal{\link}{}}
@@ -473,22 +473,6 @@ filter equal={\inresume}{y}]
 
 \cvsect{Experience}{0.6}{secondcol}{textcol}
 %\begin{longtable}[h!]
-\begin{longtable}{p{0.16\linewidth}cp{0.75\linewidth}}
-\csvreader[head to column names,
-filter equal={\inresume}{y}]
-{teaching.csv}{}
-{\textbf{\end} & : & \begin{tabular}[c]{@{}p{\linewidth}@{}}
-\ifthenelse{\equal{\institute}{}}
-{\textbf{\title}}
-{\ifthenelse{\equal{\link}{}}
-{\textbf{\title, \institute, \city~(\country)}}
-{\href{\link}{\textbf{\title, \institute, \city~(\country)}}} }
-\ifthenelse{\equal{\description}{}}{}{\\\textit{\description}}
-\ifthenelse{\equal{\bibtex}{}}{}{\cite{\bibtex}}  \\ 
-\end{tabular} \\[10pt]
-}
-\end{longtable}
-%\end{longtable}
 
 %\newpage
 \FloatBarrier
