@@ -438,8 +438,8 @@
 \begin{longtable}{p{0.16\linewidth}cp{0.75\linewidth}}
 \csvreader[head to column names,
 filter equal={\inresume}{y}]
-{education.csv}{}
-{\textbf{\date} & : & \begin{tabular}[c]{@{}l@{}}
+{experience.csv}{}
+{\textbf{text} & : & \begin{tabular}[c]{@{}l@{}}
 \ifthenelse{\equal{\link}{}}
 {\textbf{\degree, \institute, \city~(\country)}}
 {\href{\link}{\textbf{\degree, \institute, \city~(\country)}}} 
@@ -447,35 +447,7 @@ filter equal={\inresume}{y}]
 \end{tabular} \\[10pt]
 }
 \end{longtable}
-%\end{table}
 
-
-%\newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\cvsect{Experience}{0.6}{secondcol}{textcol}
-%\begin{longtable}[h!]
-\begin{longtable}{p{0.16\linewidth}cp{0.75\linewidth}}
-\csvreader[head to column names,
-filter equal={\inresume}{y}]
-{experience.csv}{}
-{\textbf{} & : & \begin{tabular}[c]{@{}p{\linewidth}@{}}
-\ifthenelse{\equal{\institute}{}}
-{\textbf{\title}}
-{\ifthenelse{\equal{\link}{}}
-{\textbf{\title, \institute, \city~(\country)}}
-{\href{\link}{\textbf{\title, \institute, \city~(\country)}}} }
-\ifthenelse{\equal{\description}{}}{}{\\\textit{\description}}
-\ifthenelse{\equal{\bibtex}{}}{}{\cite{\bibtex}}  \\ 
-\end{tabular} \\[10pt]
-}
-\end{longtable}
-%\end{longtable}
-
-\cvsect{Experience}{0.6}{secondcol}{textcol}
-%\begin{longtable}[h!]
-
-%\newpage
-\FloatBarrier
 
 %\newpage
 \FloatBarrier
