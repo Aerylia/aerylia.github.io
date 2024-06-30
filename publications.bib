@@ -56,11 +56,16 @@ keywords = {unpublished}
 }
 
 @article{2004.06052,
-  title={Architecture-aware synthesis of phase polynomials for NISQ devices},
-  author={{\textbf{Meijer-van de Griend, Arianne}} and Duncan, Ross},
-  journal={arXiv preprint arXiv:2004.06052},
-  year={2020},
-  note={Accepted to QPL2020, to appear in proceedings of QPL 2022 conference},
+   title={Architecture-Aware Synthesis of Phase Polynomials for NISQ Devices},
+   volume={394},
+   DOI={10.4204/eptcs.394.8},
+   journal={Electronic Proceedings in Theoretical Computer Science},
+   publisher={Open Publishing Association},
+   author={Meijer--van de Griend, Arianne and Duncan, Ross},
+   year={2023},
+   month=nov, 
+   pages={116-140} ,
+  note={In Proceedings QPL 2022, arXiv:2311.08375. This paper was originally accepted as Submission 38 in QPL2020, but was not included in the proceedings because of a clerical error.},
   url_Paper = {https://arxiv.org/pdf/2004.06052.pdf},
   url_Link = {https://www.youtube.com/watch?v=uOAA0nbh9MI},
   abstract = {We propose a new algorithm to synthesise quantum circuits for phase polynomials, which takes
@@ -68,9 +73,8 @@ keywords = {unpublished}
   of currently available NISQ devices. Our algorithm generates circuits with a smaller CNOT
   depth than the algorithms currently used in Staq and t|ket>, while improving the runtime
   with respect the former.},
-keywords = {accepted}
+keywords = {published}
 }
-
 
 @article{quantmark,
   author={{\textbf{Meijer - van de Griend, Adriana}} and Nurminen, Jukka K},
@@ -81,27 +85,49 @@ keywords = {accepted}
   number={},
   pages={1-1},
   doi={10.1109/TQE.2022.3159327},
+  url_Paper={https://ieeexplore.ieee.org/document/9735298},
+  abstract = {Thanks to the rise of quantum computers, many variations of the variational quantum eigensolver (VQE) have been proposed in recent times. This is a promising development for real quantum algorithms, as the VQE is a promising algorithm that runs on current quantum hardware. However, the popular method of comparing your algorithm versus a classical baseline in a small basis set is not meaningful in the big picture. Moreover, many papers use a different molecular representation or a different quantum computer to test their algorithms such that the used baselines are different between different papers. Thus, it is almost impossible to compare the different algorithms to each other. As a solution, we have built a benchmarking framework to standardize the VQE performance metrics, such that they can be analyzed more easily. Using our framework, any researcher working on the VQE can easily test their own algorithms against previous ones on the leaderboard without the need to reproduce previous work themselves.},
 keywords = {published}}
-  
+
 @article{equi2021bit,
-  title={From Bit-Parallelism to Quantum: Breaking the Quadratic Barrier},
-  author={Equi, Massimo and {\textbf{Meijer - van de Griend, Arianne}} and M{\"a}kinen, Veli},
-  journal={arXiv preprint arXiv:2112.13005},
-  year={2021},
-  url_Paper = {https://arxiv.org/pdf/2112.13005.pdf},
-keywords = {unfinished}
+  title={From Bit-Parallelism to Quantum String Matching for Labelled Graphs}, 
+  author={Massimo Equi and Arianne Meijer - van de Griend and Veli Mäkinen},
+  year={2023},
+  primaryClass={quant-ph},
+  url={https://arxiv.org/abs/2302.02848}, 
+  notes={Accepted to CPM 2023, 34th Symposium on Combinatorial Pattern Matching},
+  abstract = {Many problems that can be solved in quadratic time have bit-parallel speed-ups with factor $w$, where $w$ is the computer word size. A classic example is computing the edit distance of two strings of length $n$, which can be solved in $O(n^2/w)$ time. In a reasonable classical model of computation, one can assume $w=\Theta(\log n)$, and obtaining significantly better speed-ups is unlikely in the light of conditional lower bounds obtained for such problems.
+
+In this paper, we study the connection of bit-parallelism to quantum computation, aiming to see if a bit-parallel algorithm could be converted to a quantum algorithm with better than logarithmic speed-up. We focus on \emph{string matching in labeled graphs}, the problem of finding an exact occurrence of a string as the label of a path in a graph. This problem admits a quadratic conditional lower bound under a very restricted class of graphs (Equi et al. ICALP 2019), stating that no algorithm in the classical model of computation can solve the problem in time $O(|P||E|^{1-\epsilon})$ or $O(|P|^{1-\epsilon}|E|)$. We show that a simple bit-parallel algorithm on such restricted family of graphs (level DAGs) can indeed be converted into a realistic quantum algorithm that attains subquadratic time complexity $O(|E|\sqrt{|P|})$.
+},
+keywords = {accepted}
 }
 
 @article{2205.00724,
-  title={Dynamic qubit allocation and routing for constrained topologies by CNOT circuit re-synthesis},
-  author={{\textbf{Meijer - van de Griend, Arianne}} and Li, Sarah Meng},
-  journal={arXiv preprint arXiv:2205.00724},
-  year={2022},
-  note={To appear in proceedings of QPL 2022 conference},
+   title={Dynamic Qubit Routing with CNOT Circuit Synthesis for Quantum Compilation},
+   volume={394},
+   DOI={10.4204/eptcs.394.18},
+   journal={Electronic Proceedings in Theoretical Computer Science},
+   publisher={Open Publishing Association},
+   author={Meijer--van de Griend, Arianne and Li, Sarah Meng},
+   year={2023},
+   month=nov, pages={363-399},
   url_Paper = {https://arxiv.org/pdf/2205.00724.pdf},
   abstract = {Many quantum computers have constraints regarding which two-qubit operations are locally allowed. To run a quantum circuit under those constraints, qubits need to be allocated to different quantum registers, and multi-qubit gates need to be routed accordingly. Recent developments have shown that Steiner-tree based compiling strategies provide a competitive tool to route CNOT gates. However, these algorithms require the qubit allocation to be decided before routing. Moreover, the allocation is fixed throughout the computation, i.e. the logical qubit will not move to a different qubit register. This is inefficient with respect to the CNOT count of the resulting circuit. In this paper, we propose the algorithm PermRowCol for routing CNOTs in a quantum circuit. It dynamically reallocates logical qubits during the computation, and thus results in fewer output CNOTs than the algorithms Steiner-Gauss[11] and RowCol [23]. Here we focus on circuits over CNOT only, but this method could be generalized to a routing and allocation strategy on Clifford+T circuits by slicing the quantum circuit into subcircuits composed of CNOTs and single-qubit gates. Additionally, PermRowCol can be used in place of Steiner-Gauss in the synthesis of phase polynomials as well as the extraction of quantum circuits from ZX-diagrams.},
-keywords = {accepted}
+keywords = {published}
 }
+
+
+@article{meijer2023towards,
+  title={Towards a generic compilation approach for quantum circuits through resynthesis},
+  author={Meijer--van de Griend, Arianne},
+  journal={arXiv preprint arXiv:2304.08814},
+  year={2023},
+  doi = {10.48550/ARXIV.2304.08814},
+  abstract = {In this paper, we propose a generic quantum circuit resynthesis approach for compilation. We use an intermediate representation consisting of Paulistrings over {Z, I} and {X, I} called a ``mixed ZX-phase polynomial``. From this universal representation, we generate a completely new circuit such that all multi-qubit gates (CNOTs) are satisfying a given quantum architecture. Moreover, we attempt to minimize the amount of generated gates.
+The proposed algorithms generate fewer CNOTs than similar previous methods on different connectivity graphs ranging from 5-20 qubits. In most cases, the CNOT counts are also lower than Qiskit's. For large circuits, containing >= 100 Paulistrings, our proposed algorithms even generate fewer CNOTs than the TKET compiler.
+Additionally, we give insight into the trade-off between compilation time and final CNOT count.},
+  keywords = {unfinished},
 }
 
 @article{PhDThesis,
@@ -109,5 +135,39 @@ keywords = {accepted}
   author={Meijer-van de Griend, Arianne},
   year={2024},
   publisher={Helsingin yliopisto},
-  url_Paper={http://urn.fi/URN:ISBN:978-952-84-0077-6}
+  url_Paper={http://urn.fi/URN:ISBN:978-952-84-0077-6},
+  keywords = {published},
+  abstract = {Recent advances in the development of quantum technology have made it possible to run small quantum programs on real quantum computers. This has created a need for compiling methods specific to these quantum computers. Unlike classical computers, if a quantum computation takes too long, the qubits might decohere and lose their information, making the computation useless. Hence, well-optimized quantum programs are a necessity.
+
+Like classical computers, quantum computers have registers for qubits that are generally sparsely connected. However, classical compilation methods that rely on copying data from one register to another do not apply to quantum computers because qubits cannot be copied. This problem is called the qubit routing problem. Following classical compilation, one could solve the connectivity constraints by moving the qubits to adjacent qubit registers. However, this requires the addition of SWAP gates throughout the quantum circuit, resulting in a strictly longer program. Additionally, a SWAP gate on qubits is not cheap and requires three CNOT gates each.
+
+Instead, in this thesis, we have defined a new method for quantum compilation that is based in the quantum nature of the program to be compiled. Instead of routing the qubits directly, we generate new machine code (in the form of quantum circuits) from an intermediate representation. We call this process quantum circuit synthesis. During synthesis, we make sure that all generated gates are supported by the target quantum hardware. Additionally, if the synthesis process is optimal, the resulting quantum circuit will also be optimal, although the methods proposed in this thesis are all heuristic in nature due to the computational complexity of optimal architecture-aware synthesis.
+
+We construct the nested intermediate representation starting from sequences of CNOT circuits interleaved with single qubit gates and incrementally generalize the intermediate representation to a universal representation. In particular, we propose two algorithms for synthesizing CNOT circuits from their parity matrix representation and one algorithm for synthesizing phase polynomials (i.e. CNOT+$R_Z$ circuits). Additionally, we show that when combining these methods into the universal representation called Mixed ZX-phase polynomial, it is competitive with existing commercial quantum compilers IBM's Qiskit and Quantinuum's TKET for large circuits.
+
+This thesis additionally contains a proposal for a framework to benchmark the quality of circuits used in an algorithm called Variational Quantum Eigensolver (VQE). This framework attempts to measure how close the solution found by the VQE is to our best estimate of a real molecule (i.e. accuracy), rather than a classical simulation of the approximate molecule as given to the quantum computer (i.e. precision).},
 }
+
+@article{stirbu2024exposinghiddenlayersinterplay,
+      title={Exposing the hidden layers and interplay in the quantum software stack}, 
+      author={Vlad Stirbu and Arianne Meijer-van de Griend and Jake Muff},
+      year={2024},
+      eprint={2403.16545},
+      url_Paper={https://arxiv.org/abs/2403.16545}, 
+      abstract = {Current and near-future quantum computers face resource limitations due to noise and low qubit counts. Despite this, effective quantum advantage can still be achieved due to the exponential nature of bit-to-qubit conversion. However, optimizing the software architecture of these systems is essential to utilize available resources efficiently. Unfortunately, the focus on user-friendly quantum computers has obscured critical steps in the software stack, leading to ripple effects into the stack's upper layer induced by limitations in current qubit implementations. This paper unveils the hidden interplay among layers of the quantum software stack.},
+      keywords = {accepted},
+}
+
+@misc{winderl2023architectureawaresynthesisstabilizercircuits,
+      title={Architecture-Aware Synthesis of Stabilizer Circuits from Clifford Tableaus}, 
+      author={David Winderl and Qunsheng Huang and Arianne Meijer-van de Griend and Richie Yeung},
+      year={2023},
+      eprint={2309.08972},
+      archivePrefix={arXiv},
+      primaryClass={quant-ph},
+      url={https://arxiv.org/abs/2309.08972}, 
+      keywords = {},
+      abstract = {Since quantum computing is currently in the NISQ-Era, compilation strategies to reduce the number of gates executed on specific hardware are required. In this work, we utilize the concept of synthesis of a data structure called Clifford tableaus, focusing on applying CNOTs within the respective connectivity graph of the quantum device. We hence contribute to the field of compilation or, more precisely, synthesis by reducing the number of CNOTs in the synthesized quantum circuit. Upon convergence, our method shows to outperform other state-of-the-art synthesis techniques, when executed with respect to a specific hardware. Upon executing the resulting circuits on real hardware, our synthesized circuits tend to increase the final fidelity and reduce the overall execution times.},
+}
+
+
