@@ -1,9 +1,9 @@
-startdate, enddate,degree,institute,city,country,link,notes,inresume
-01/2021,current,Computer Science PhD,University of Helsinki,Helsinki,Finland,https://www.helsinki.fi/?lang=en,Researching NISQ software.,y
+startdate, enddate,degree,institute,city,country,link,notes, thesis,inresume
+01/2021,01/2024,Computer Science PhD,University of Helsinki,Helsinki,Finland,https://www.helsinki.fi/?lang=en,Graduated with distinction., Advances in compilation methods in the NISQ era,y
 06/2022,06/2022,QCHS Summer school, EPFL, Lausanne, Switzerland,,Learned about quantum computing hardware and software,y
-09/2016,08/2019,Master Artificial Intelligence,Radboud University,Nijmegen,the Netherlands,http://www.ru.nl/english/education/masters/web-and-language-interaction/,Judicium: Cum Laude (i.e. graduated with distinction),y
-11/2015,06/2019,Master Computing Science,Radboud University,Nijmegen,the Netherlands,http://www.ru.nl/english/education/masters/data-science/,,y
-09/2013,01/2019,Bachelor Artificial Intelligence,University of Groningen,Groningen,the Netherlands,https://www.rug.nl/bachelors/artificial-intelligence/?lang=en,,y
-09/2011,10/2015,Bachelor Computer Science,University of Groningen,Groningen,the Netherlands,https://www.rug.nl/bachelors/computing-science/?lang=en,,y
-09/2011,06/2013,Bachelor Mathematics,University of Groningen,Groningen,the Netherlands,https://www.rug.nl/bachelors/mathematics/,Not graduated,n
-08/2010,06/2011,VWO (VAVO), Deltion Sprint Lyceum,Zwolle,the Netherlands,,Finished the last 2 years of highschool in 1 year.,n
+09/2016,08/2019,Master Artificial Intelligence,Radboud University,Nijmegen,the Netherlands,http://www.ru.nl/english/education/masters/web-and-language-interaction/,Judicium: Cum Laude (i.e. graduated with distinction),Constrained quantum CNOT circuit re-synthesis using deep reinforcement learning,y
+11/2015,06/2019,Master Computing Science,Radboud University,Nijmegen,the Netherlands,http://www.ru.nl/english/education/masters/data-science/,,Natural language generation for commercial applications,y
+09/2013,01/2019,Bachelor Artificial Intelligence,University of Groningen,Groningen,the Netherlands,https://www.rug.nl/bachelors/artificial-intelligence/?lang=en,,Syndrome detection using kinship verification,y
+09/2011,10/2015,Bachelor Computer Science,University of Groningen,Groningen,the Netherlands,https://www.rug.nl/bachelors/computing-science/?lang=en,,Computers should learn from their mistakes: Finding errors in a computer network based on the log files of the network components,y
+09/2011,06/2013,Bachelor Mathematics,University of Groningen,Groningen,the Netherlands,https://www.rug.nl/bachelors/mathematics/,Not graduated,,n
+08/2010,06/2011,VWO (VAVO), Deltion Sprint Lyceum,Zwolle,the Netherlands,,Finished the last 2 years of highschool in 1 year.,Shinpeki Sanpō: “Heilige Wiskunde” (Holy mathematics),n
