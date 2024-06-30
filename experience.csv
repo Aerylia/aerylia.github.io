@@ -1,5 +1,8 @@
 startdate, enddate,title,institute,city,country,link,description,bibtex,inresume
-01/2021,current,Doctoral researcher,University of Helsinki,Helsinki,Finland,https://www.helsinki.fi/,Researching NISQ software. Supervisors: Jukka K. Nurminen and Sabrina Maniscalco.,,y
+02/2024,current,Postdoctoral researcher,University of Helsinki,Helsinki,Finland,https://www.helsinki.fi/,Researching quantum software.,,y
+09/2024,current,Quantum Software Engineer, IQM, Espoo, Finland, https://www.meetiqm.com/, Building the quantum software stack.,,y
+03/2024,08/2024,Junior Quantum Software Engineer, IQM, Espoo, Finland, https://www.meetiqm.com/, Building the quantum software stack.,,y
+01/2021,01/2024,Doctoral researcher,University of Helsinki,Helsinki,Finland,https://www.helsinki.fi/,Researching NISQ software. Supervisors: Jukka K. Nurminen and Sabrina Maniscalco.,PhDThesis,y
 08/2020,12/2020,Project researcher,University of Turku,Turku,Finland,http://www.tcqp.fi/,Researching quantum computing algorithms in particular VQE.,,y
 10/2019,04/2020,Research scientist,Cambridge Quantum Computing,Cambridge,United Kingdom,https://cambridgequantum.com/,Developing new methods for t|ket> i.e. researching quantum compiling techniques.,2004.06052,y
 04/2019,08/2019,AI Master thesis,Radboud University,Nijmegen,the Netherlands,https://quantum.cs.ru.nl/,Investigated the use of deep reinforcement learning for compiling quantum circuits. Supervisors:  Aleks Kissinger (RU) and Johan Kwisthout (RU). Grade: 9/10.,CSThesis,
@@ -11,4 +14,5 @@ startdate, enddate,title,institute,city,country,link,description,bibtex,inresume
 03/2016,08/2016,Graduation Internship Artificial Intelligence,RadboudUMC,Nijmegen,the Netherlands,https://www.radboudumc.nl/afdelingen/genetica,Used kinship verification for syndrome diagnosis. Supervisors: Marco Wiering (RuG) Jayne Hehir-Kwa (RadboudUMC) Hamdi Dibeklioglu (TU Delft).,,y
 05/2015,08/2015,Graduation Internship Computer Science,Atos,Groningen,the Netherlands,https://atos.net/en-nl/netherlands,Used text mining for predictive maintenance on Atos' computer network. Supervisors: Michael Biehl (RuG) Marco Aiello (RuG) Mark Niemeijer (Atos).,,y
 08/2013,03/2014,Outbound call center employee,Nuvema,Groningen,the Netherlands,,Called people to make appointments to discuss life insurance.,,
+07/2012,08/2012,Intern, Verius Advies, Sliedracht, the Netherlands,, Secretary and marketing work at the law firm.,,n
 06/2011,07/2011,Problem solver,Van Dijk Educatie,Kampen,the Netherlands,,Solving problems in the warehouse; counting stock and updating the system when necessary.,,
