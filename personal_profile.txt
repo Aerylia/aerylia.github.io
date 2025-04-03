@@ -1,5 +1,3 @@
-I  am a Doctoral researcher working on quantum software for Noisy Intermediate-scale Quantum (NISQ) devices at the University of Helsinki My specialization is in compilation methods for quantum computers. 
+I  am a Postdoc working on quantum software for Noisy Intermediate-scale Quantum (NISQ) devices at the University of Helsinki My specialization is in compilation methods for quantum computers. 
 
-Other than my academic experience, I have also obtained diverse international working experience in industry. Both have provided me with the opportunity to publish multiple quantum papers. 
-
-Additionally, I am the secretary of the IEEE SA P2995 working group on quantum algorithm standards.
+Additionally, I am a Quantum Software Engineer at IQM.
